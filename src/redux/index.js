@@ -1,1 +1,1 @@
-export { addStudent, rmvStudent, getStudent } from "./student/studentActions";
+export { addStudent, rmvStudent } from "./student/studentActions";

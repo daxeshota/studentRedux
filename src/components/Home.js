@@ -1,14 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { rmvStudent, getStudent } from "../redux";
+import { rmvStudent } from "../redux";
 
 const Home = () => {
   const arr = useSelector((state) => state.student);
   const dispatch = useDispatch();
-
-  const editFunc = (item) => {
-    dispatch(getStudent(item));
-  };
 
   return (
     <div className="container text-center w-50">
@@ -31,12 +27,6 @@ const Home = () => {
               onClick={() => dispatch(rmvStudent(item.id))}
             >
               REMOVE
-            </button>
-            <button
-              className="btn btn-warning flex-end"
-              onClick={() => editFunc(item)}
-            >
-              EDIT
             </button>
           </div>
         ))

@@ -1,9 +1,8 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Edit from "./components/Edit";
 import Form from "./components/Form";
-import Home from './components/Home'
+import Home from "./components/Home";
 function App() {
   return (
     <>
@@ -11,7 +10,6 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/edit" element={<Edit />}></Route>
           <Route path="/form" element={<Form />}></Route>
         </Routes>
       </BrowserRouter>
